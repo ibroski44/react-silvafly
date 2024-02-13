@@ -15,21 +15,35 @@ const Navbar = ({ links }) => {
   const theme = useTheme();
   console.log(theme);
   const isMatch = useMediaQuery(theme.breakpoints.down("md"));
-  const [value, setValue] = useState();
   return (
     <AppBar
-      style={{ backgroundColor: "rgba(255, 255, 255, 1)", color: "black" }}
+      style={{
+        backgroundColor: "rgba(255, 255, 255, 1)",
+        color: "black",
+      }}
     >
       <Toolbar>
         {isMatch ? (
           <>
-            <img src="/images/qa.png" width={120} height={40}></img>
+            <a href="/Home">
+              <img
+                src="/images/silvafly-logo.png"
+                width={120}
+                height={40}
+              ></img>
+            </a>
             <DrawerComponent links={links} />
           </>
         ) : (
           <Grid container>
             <Grid item xs={2}>
-              <img src="/images/qa.png" width={120} height={40}></img>
+              <a href="/Home">
+                <img
+                  src="/images/silvafly-logo.png"
+                  width={120}
+                  height={40}
+                ></img>
+              </a>
             </Grid>
 
             <Grid

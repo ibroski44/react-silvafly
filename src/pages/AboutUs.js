@@ -2,7 +2,6 @@ import React from "react";
 import { Grid } from "@mui/material";
 import { Typography } from "@mui/material";
 import Card from "@mui/material/Card";
-import CardContent from "@mui/material/CardContent";
 import { Divider } from "@mui/material";
 
 import { Box } from "@mui/material";
@@ -10,15 +9,15 @@ import { Box } from "@mui/material";
 const About = () => {
   return (
     <Box>
-      <Box position={"relative"}>
+      <Box position={"relative"} fontFamily={"montserrat"}>
         <Typography
           width={"100%"}
-          height={"625px"}
+          height={"563px"}
           sx={{ backgroundColor: "blue" }}
         ></Typography>
 
         <Typography
-          variant="h3"
+          variant="h2"
           textAlign={"center"}
           sx={{
             position: "absolute",
@@ -30,25 +29,21 @@ const About = () => {
             fontFamily: "montserrat",
           }}
         >
-          ABOUT-US
+          About-US
         </Typography>
       </Box>
-      <Grid container spacing={2} paddingTop={"50px"} paddingBottom={"50px"}>
-        <Grid item xs={12} md={6}>
-          <Card
-            sx={{
-              display: "flex",
-              flexDirection: "column",
-              ml: "200px",
-              height: "400px",
-            }}
-          >
-            <CardContent>
+      <Box display={"flex"} flexDirection={"row"} justifyContent={"center"}>
+        <Grid container spacing={2} paddingTop={"70px"} paddingBottom={"70px"}>
+          <Grid item xs={12} md={12} lg={6}>
+            <Box>
               <Typography
                 variant="subtitle1"
                 color="text"
                 component="div"
                 pt={"50px"}
+                pl={"90px"}
+                pr={"60px"}
+                pb={"30px"}
               >
                 As a family-owned bakery, we take pride in crafting the finest
                 and richest bread with love and dedication. Our commitment is
@@ -62,60 +57,74 @@ const About = () => {
                 leaves you craving for more. Welcome to a world that prioritizes
                 your health, welcome to Silvafly Bakery.
               </Typography>
-            </CardContent>
-          </Card>
+            </Box>
+          </Grid>
+          <Box display={"flex"} flexDirection={"row"}>
+            <Grid item lg={6} md={6}>
+              <Card
+                sx={{ width: "600px", height: "350px", borderRadius: "20px" }}
+              >
+                <div>
+                  <img
+                    src="/images/Agege-bread2.jpg"
+                    alt="bread"
+                    width={"300px"}
+                    height={"350px"}
+                  />
+                  <img
+                    src="/images/sausage_mini_banana_bread.png"
+                    alt="sausage_roll"
+                    width={"300px"}
+                    height={"350px"}
+                  />
+                </div>
+              </Card>
+            </Grid>
+          </Box>
         </Grid>
-        <Grid item xs={12} md={6}>
-          <Card sx={{ display: "flex" }}>
-            <CardContent>
-              <img
-                src="/images/com.png"
-                alt="scan"
-                width={"400px"}
-                height={"400px"}
-              />
-            </CardContent>
-          </Card>
-        </Grid>
-      </Grid>
+      </Box>
+
       <footer
         style={{
           width: "100%",
-          height: "650px",
+          height: "563px",
           backgroundColor: "rgba(253, 131, 35, 1)",
         }}
       >
         <Box>
           <Typography
             textAlign={"center"}
-            paddingTop={"50px"}
+            paddingTop={"30px"}
+            variant="h5"
             color={"rgba(18, 39, 221, 1)"}
           >
             Currently, Agege Bread is available only on <br /> WEDNESDAYS
             AND SATURDAYS
           </Typography>
-          <Typography textAlign={"center"} color={"white"}>
+          <Typography textAlign={"center"} variant="h6" color={"white"}>
             Order a day prior latest 10pm PST
           </Typography>
           <Box
             display={"flex"}
             flexDirection={"row"}
             justifyContent={"center"}
-            pt={"150px"}
-            pb={"220px"}
+            color={"white"}
+            fontFamily={"montserrat"}
+            pt={"70px"}
+            pb={"200px"}
           >
             <Box paddingRight={"100px"}>
               <Grid container spacing={2} alignItems="center">
                 <Grid item>
                   <img
-                    src="/images/em.png"
+                    src="/images/message-logo.png"
                     alt="instagram"
                     width={"60px"}
                     height={"60px"}
                   />
                 </Grid>
                 <Grid item>
-                  <Typography variant="h5" color="black">
+                  <Typography variant="h5" color="white">
                     silvaflyllc@gmail.com
                   </Typography>
                 </Grid>
@@ -125,45 +134,48 @@ const About = () => {
               <Grid container spacing={2} alignItems="center">
                 <Grid item>
                   <img
-                    src="/images/pc.png"
+                    src="/images/phone-call.png"
                     alt="instagram"
                     width={"60px"}
                     height={"60px"}
                   />
                 </Grid>
                 <Grid item>
-                  <Typography variant="h5" color="black">
+                  <Typography variant="h5" color="white">
                     +1(469)-605-1142
                   </Typography>
                 </Grid>
               </Grid>
             </Box>
           </Box>
-          <div>
+          <div style={{ backgroundColor: "white" }}>
             <Divider />
           </div>
-          <Box>
-            <Grid
-              container
-              spacing={2}
-              justifyContent={"center"}
-              paddingTop={"20px"}
-            >
+          <Box
+            display={"flex"}
+            flexDirection={"row"}
+            paddingTop={"20px"}
+            color={"white"}
+            fontFamily={"montserrat"}
+          >
+            <Grid container spacing={2} justifyContent={"center"}>
               <Typography
                 variant="body2"
-                color="black"
+                color="white"
                 paddingTop={"20px"}
                 paddingRight={"300px"}
               >
                 copyright© 2024 silvafly bakery
               </Typography>
               <Grid item>
-                <img
-                  src="/images/instagram.png"
-                  alt="instagram"
-                  width={"40px"}
-                  height={"40px"}
-                />
+                <a href="https://www.instagram.com/silvaflybakery/">
+                  <img
+                    src="/images/instagram2.jpg"
+                    alt="instagram"
+                    width={"30px"}
+                    height={"30px"}
+                  />
+                </a>
               </Grid>
             </Grid>
           </Box>

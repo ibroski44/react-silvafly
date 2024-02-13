@@ -24,7 +24,19 @@ const DrawerComponent = ({ links }) => {
             <Link to={`/${el}`} key={index}>
               <ListItemButton onClick={() => setOpen(false)} divider>
                 <ListItemIcon>
-                  <ListItemText sx={{ color: "white" }}>{el}</ListItemText>
+                  <ListItemText
+                    sx={{
+                      color: "white",
+                      backgroundColor: "blue",
+                      width: "70px",
+                      height: "40px",
+                      textAlign: "center",
+                      pt: "5px",
+                      "&:hover": { backgroundColor: "orange" },
+                    }}
+                  >
+                    {el}
+                  </ListItemText>
                 </ListItemIcon>
               </ListItemButton>
             </Link>
